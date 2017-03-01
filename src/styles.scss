@@ -33,10 +33,20 @@ a {
   font-size: 24px;
 }
 
-.heading-description {
+%heading-description {
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 0;
+}
+
+.heading-description {
+  @extend %heading-description;
+}
+
+.heading-description-lead {
+  @extend %heading-description;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .profile-image-container {
