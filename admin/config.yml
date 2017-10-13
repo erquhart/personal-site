@@ -9,7 +9,13 @@ collections:
     label: Stuff
     files:
       - name: stuff
-      - label: Stuff
-      - file: stuff.json
-      - fields:
-        - {label: "Title", name: "title"}
+        label: Stuff
+        file: stuff/stuff.json
+        fields:
+          - label: Entries
+            name: entries
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: title}
+              - {label: Date, name: date, widget: datetime}
+              - {label: Body, name: body, widget: markdown}
