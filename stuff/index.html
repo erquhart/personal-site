@@ -12,9 +12,18 @@
     .entry {
       margin: 70px 0 80px;
     }
+    .title {
+      padding: 22px 40px;
+      margin: 0 -40px;
+      border-top: 4px solid #ff2c5d;
+    }
     .date {
       text-transform: lowercase;
       font-weight: 600;
+      color: #fff;
+      background-color: #ff2c5d;
+      padding: 4px 40px;
+      margin: 0 -40px;
     }
   </style>
 </head>
@@ -33,7 +42,7 @@
       }
       const html = `
         <div class="entry">
-          <h1>${entry.title}</h1>
+          <h1 class="title">${entry.title}</h1>
           <p class="date">${dateFns.format(entry.date, 'dddd, MMMM Do, YYYY')}</p>
           <div>${converter.makeHtml(entry.body)}</div>
         </div>
