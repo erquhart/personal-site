@@ -1,0 +1,15 @@
+backend:
+  name: github
+  repo: erquhart/personal-site
+
+media_folder: uploads
+
+collections:
+  - name: stuff
+    label: Stuff
+    files:
+      - name: stuff
+      - label: Stuff
+      - file: stuff.json
+      - fields:
+        - {label: "Title", name: "title"}
