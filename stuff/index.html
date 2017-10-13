@@ -1,5 +1,4 @@
 <head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.29.0/date_fns.min.js"></script>
   <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
   <style>
@@ -25,7 +24,7 @@
     const root = document.getElementById('root');
     const converter = new showdown.Converter();
     const getJson = async url => await (await fetch(url)).json();
-    getJson('stuff.json').then(json => _(json.entries).sortBy('date').reverse().forEach(render));
+    getJson('stuff.json').then(json => json.entries.forEach(render));
 
     function render(entry, idx, entries) {
       if (idx) {
