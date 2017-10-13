@@ -1,0 +1,47 @@
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.29.0/date_fns.min.js"></script>
+  <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    #root {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .entry {
+      margin: 70px 0 80px;
+    }
+    .date {
+      text-transform: lowercase;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const root = document.getElementById('root');
+    const converter = new showdown.Converter();
+    const getJson = async url => await (await fetch(url)).json();
+    getJson('stuff.json').then(json => _(json.entries).sortBy('date').reverse().forEach(render));
+
+    function render(entry, idx, entries) {
+      if (idx) {
+        const hr =  document.createElement('hr');
+        root.appendChild(hr);
+      }
+      const html = `
+        <div class="entry">
+          <h1>${entry.title}</h1>
+          <p class="date">${dateFns.format(entry.date, 'dddd, MMMM Do, YYYY')}</p>
+          <div>${converter.makeHtml(entry.body)}</div>
+        </div>
+      `;
+      const element = document.createElement('div');
+      element.innerHTML = html;
+      root.appendChild(element);
+    }
+  </script>
+</body>
