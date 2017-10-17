@@ -31,7 +31,7 @@
   <div id="root"></div>
   <script>
     const root = document.getElementById('root');
-    const converter = new showdown.Converter();
+    const converter = new showdown.Converter({ disableForced4SpacesIndentedSublists: true });
     const getJson = async url => await (await fetch(url)).json();
     getJson('stuff.json').then(json => json.entries.forEach(render));
 
