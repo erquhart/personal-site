@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "browser-sync start -s -f '**/*'"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}
