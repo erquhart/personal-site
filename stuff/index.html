@@ -35,11 +35,7 @@
     const getJson = async url => await (await fetch(url)).json();
     getJson('stuff.json').then(json => json.entries.forEach(render));
 
-    function render(entry, idx, entries) {
-      if (idx) {
-        const hr =  document.createElement('hr');
-        root.appendChild(hr);
-      }
+    function render(entry) {
       const html = `
         <div class="entry">
           <h1 class="title">${entry.title}</h1>
