@@ -5,6 +5,22 @@ media_folder: uploads
 publish_mode: editorial_workflow
 
 collections:
+  - name: "settings"
+    files:
+      - name: sections
+        file: "data/sections.yml"
+        widget: list
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Label, name: label, widget: string}
+  - name: pages
+    folder: "src/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {name: section, widget: relation, collection: settings, searchFields: name, valueField: name}
   - name: "dates"
     label: "Dates"
     folder: "_dates"
