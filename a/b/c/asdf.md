@@ -1,6 +1,5 @@
 ---
 title: asdf
-list:
-  - list_child: ''
+list: []
 ---
 
