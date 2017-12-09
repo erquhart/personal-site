@@ -1,6 +1,6 @@
 ---
 title: asdf
 list:
-  - list_child: s
+  - list_child: ''
 ---
 
