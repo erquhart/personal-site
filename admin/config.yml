@@ -5,6 +5,11 @@ media_folder: uploads
 publish_mode: editorial_workflow
 
 collections:
+  - name: blog
+    label: Blog
+    folder: a/b/c
+    fields:
+      - {label: Title, name: title}
   - name: stuff
     label: Stuff
     files:
