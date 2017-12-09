@@ -3,7 +3,7 @@
     "start": "npm run build && npm run serve",
     "serve": "browser-sync start -s -f '**/*' --serveStatic 'dist'",
     "mustache": "mustache src/index.json src/index.mustache > dist/index.html",
-    "copy": "ncp src/admin/ dist/admin/ && ncp src/stuff/ dist/stuff/ && ncp src/styles.css dist/styles.css",
+    "copy": "ncp src/admin/ dist/admin/ && ncp src/stuff/ dist/stuff/ && ncp assets/ dist/assets/ && ncp src/styles.css dist/styles.css",
     "clean": "rimraf dist",
     "build": "npm run clean && mkdir dist && npm run mustache && npm run copy"
   },
