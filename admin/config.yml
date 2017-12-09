@@ -10,7 +10,7 @@ collections:
     folder: a/b/c
     create: true
     fields:
-      - {label: Title, name: title}
+      - {label: Title, name: test}
       - {label: List, name: list, widget: list, required: false, fields: [{label: List Child, name: list_child}]}
   - name: stuff
     label: Stuff
