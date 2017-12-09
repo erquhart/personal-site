@@ -1,4 +1,5 @@
 ---
 title: asdf
+list: []
 ---
 
