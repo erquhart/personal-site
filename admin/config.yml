@@ -6,14 +6,17 @@ publish_mode: editorial_workflow
 
 collections:
   - name: "settings"
+    label: Settings
     files:
       - name: sections
+        label: Sections
         file: "data/sections.yml"
         widget: list
         fields:
           - {label: Name, name: name, widget: string}
           - {label: Label, name: label, widget: string}
   - name: pages
+    label: Pages
     folder: "src/pages"
     create: true
     slug: "{{slug}}"
