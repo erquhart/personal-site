@@ -11,9 +11,7 @@ collections:
     create: true
     fields:
       - {label: Title, name: title}
-      - {label: List, name: list, widget: list, required: false, fields: [
-        - {label: List Child, name: list_child}
-      ]}
+      - {label: List, name: list, widget: list, required: false, fields: [{label: List Child, name: list_child}]}
   - name: stuff
     label: Stuff
     files:
