@@ -5,12 +5,25 @@ media_folder: uploads
 publish_mode: editorial_workflow
 
 collections:
+  - name: "dates"
+    label: "Dates"
+    folder: "_dates"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - name: events
+        label: Events
+        widget: list
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Start Date", name: "start_date", widget: "date"}
   - name: blog
     label: Blog
     folder: a/b/c
     create: true
     fields:
-      - {label: Title, name: test}
+      - {label: Title, name: title}
       - {label: List, name: list, widget: list, required: false, fields: [{label: List Child, name: list_child}]}
   - name: stuff
     label: Stuff
