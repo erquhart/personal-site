@@ -1,0 +1,22 @@
+<head>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link href="https://unpkg.com/netlify-cms/dist/cms.css" rel="stylesheet">
+</head>
+<body>
+  <script src="https://unpkg.com/netlify-cms/dist/cms.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.29.0/date_fns.min.js"></script>
+  <script>
+    const TitlePreview = createClass({
+      render: function() {
+        return h('h1', {}, this.props.value);
+      }
+    });
+    const DateTimePreview = createClass({
+      render: function() {
+        return h('div', {}, dateFns.format(this.props.value, 'dddd, MMMM Do, YYYY'));
+      }
+    });
+    CMS.registerWidget('title', 'string', TitlePreview);
+    CMS.registerWidget('datetime', 'datetime', DateTimePreview);
+  </script>
+</body>

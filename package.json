@@ -1,8 +1,18 @@
 {
   "scripts": {
-    "start": "browser-sync start -s -f '**/*'"
+    "start": "npm run build && npm run serve",
+    "serve": "browser-sync start -s -f '**/*' --serveStatic 'dist'",
+    "mustache": "mustache src/index.json src/index.mustache > dist/index.html",
+    "copy": "ncp src/admin/ dist/admin/ && ncp src/stuff/ dist/stuff/ && ncp src/styles.css dist/styles.css",
+    "clean": "rimraf dist",
+    "build": "npm run clean && mkdir dist && npm run mustache && npm run copy"
   },
   "dependencies": {
     "browser-sync": "^2.18.13"
+  },
+  "devDependencies": {
+    "mustache": "^2.3.0",
+    "ncp": "^2.0.0",
+    "rimraf": "^2.6.2"
   }
 }
