@@ -11,7 +11,7 @@ collections:
         label: Home
         file: src/index.json
         fields:
-          - {label: Profile Pic, name: profile-pic, widget: image}
+          - {label: Profile Image, name: profile-image, widget: image}
       - name: stuff
         label: Stuff
         file: src/stuff/stuff.json
