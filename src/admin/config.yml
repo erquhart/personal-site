@@ -12,7 +12,23 @@ collections:
         label: Home
         file: src/index.json
         fields:
+          - {label: Name, name: name}
           - {label: Profile Image, name: profile-image, widget: image}
+          - {label: Heading, name: heading}
+          - label: Position
+            name: position
+            widget: object
+            fields:
+              - {name: title, label: Title}
+              - {name: link_address, label: Link Address}
+              - {name: link_text, label: Link Text}
+          - name: recent_work
+            label: Recent Work
+            widget: list
+            fields:
+              - {name: heading, label: Heading}
+              - {name: description, label: Description}
+              - {name: link_address, label: Link Address}
       - name: stuff
         label: Stuff
         file: src/stuff/stuff.json

@@ -5,7 +5,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Shawn Erquhart | Technical Architect & Product Developer</title>
+  <title>Shawn Erquhart | {{heading}}</title>
 
   <script>
     // Google Analytics
@@ -29,12 +29,12 @@
     <div class="profile-image-container">
       <img class="profile-image" src="{{profile-image}}">
     </div>
-    <h1 class="heading-name">Shawn Erquhart</h1>
+    <h1 class="heading-name">{{name}}</h1>
     <p class="heading-description-lead">
-      Master of the Universe
+      {{heading}}
     </p>
     <p class="heading-description">
-      Currently: Netlify CMS Lead @ <a href="https://netlify.com">Netlify</a>
+      Currently: {{position.title}} @ <a href="{{position.link_address}}">{{position.link_text}}</a>
     </p>
   </header>
   <div class="page-sections">
@@ -42,14 +42,12 @@
       <h2 class="section-heading">
         <span class="section-heading-text">Recent work</span>
       </h2>
-      <a class="item-link" href="https://netlifycms.org">
-        <p class="item-heading">Netlify CMS</p>
-        <p class="item-description">An open-source, git-based CMS for the JAMstack.</p>
-      </a>
-      <a class="item-link" href="https://millwrightjs.com">
-        <p class="item-heading">millwright.js</p>
-        <p class="item-description">The easiest build tool you'll ever use.</p>
-      </a>
+      {{#recent_work}}
+        <a class="item-link" href="{{link_address}}">
+          <p class="item-heading">{{heading}}</p>
+          <p class="item-description">{{description}}</p>
+        </a>
+      {{/recent_work}}
     </section>
     <section class="page-section">
       <h2 class="section-heading">
