@@ -1,3 +1,22 @@
 {
-  "profile-image": "/assets/img_3038.jpeg"
+  "name": "Shawn Erquhart",
+  "profile-image": "/assets/img_3038.jpeg",
+  "heading": "Product Developer. Bad at Foosball.",
+  "position": {
+    "title": "Netlify CMS Lead",
+    "link_address": "https://www.netlify.com",
+    "link_text": "Netlify"
+  },
+  "recent_work": [
+    {
+      "heading": "Netlify CMS",
+      "description": "An open source, Git based CMS for the JAMstack.",
+      "link_address": "https://www.netlifycms.org"
+    },
+    {
+      "heading": "millwright.js",
+      "description": "The easiest build tool you'll never use.",
+      "link_address": "https://millwrightjs.com"
+    }
+  ]
 }
