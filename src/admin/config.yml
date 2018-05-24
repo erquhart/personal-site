@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: erquhart/personal-site
+  name: git-gateway
 
 media_folder: assets
 
