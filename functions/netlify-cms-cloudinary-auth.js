@@ -1,4 +1,4 @@
-import hasha from 'hasha';
+const hasha = require('hasha');
 
 exports.handler = async (event, context) => {
   const { CLOUDINARY_USERNAME: username, CLOUDINARY_API_SECRET: secret } = process.env
