@@ -8,6 +8,9 @@ exports.handler = async (event, context) => {
   const hash = hasha(str, { algorithm: 'sha256' });
   return {
     statusCode: 200,
-    body: hash,
+    body: `
+      ${hash}
+      ${timestamp}
+    `,
   }
 }
