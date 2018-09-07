@@ -1,6 +1,9 @@
-exports.handler = function(event, context, callback) {
+exports.handler = async (event, context) => {
   return {
     statusCode: 200,
-    body: "test",
-  };
+    body: `
+      ${JSON.stringify(event, null, 2)}
+      ${JSON.stringify(context, null, 2)}
+    `,
+  }
 }
