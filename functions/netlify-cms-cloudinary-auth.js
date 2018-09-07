@@ -1,4 +1,9 @@
 exports.handler = function(event, context, callback) {
-  console.log(event);
-  console.log(context);
+  return {
+    statusCode: 200,
+    body: `
+      ${JSON.stringify(event, null, 2)}
+      ${JSON.stringify(context, null, 2)}
+    `,
+  };
 }
