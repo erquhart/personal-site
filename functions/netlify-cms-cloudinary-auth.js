@@ -83,7 +83,12 @@ exports.handler = (() => {
     const hash = hasha(str, { algorithm: 'sha256' });
     return {
       statusCode: 200,
-      body: hash
+      body: `
+      ${JSON.stringify(event, null, 2)}
+      ${JSON.stringify(context, null, 2)}
+      ${hash}
+      ${timestamp}
+    `
     };
   });
 

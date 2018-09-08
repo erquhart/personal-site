@@ -2,6 +2,7 @@
   "scripts": {
     "start": "npm run build && npm run serve",
     "serve": "browser-sync start -s -f '**/*' --serveStatic 'dist'",
+    "serve:lambda": "netlify-lambda serve src/lambda",
     "mustache": "mustache src/index.json src/index.mustache > dist/index.html",
     "copy": "ncp src/admin/ dist/admin/ && ncp src/stuff/ dist/stuff/ && ncp assets/ dist/assets/ && ncp src/styles.css dist/styles.css",
     "clean": "rimraf dist",
