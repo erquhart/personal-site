@@ -1,0 +1,13 @@
+backend:
+  name: git-gateway
+
+media_folder: assets
+
+collections:
+  - name: notes
+    folder: notes
+    label: Notes
+    fields:
+      - {label: Title, name: title, widget: title}
+      - {label: Date, name: date, widget: datetime}
+      - {label: Body, name: body, widget: markdown}

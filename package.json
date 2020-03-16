@@ -4,7 +4,7 @@
     "serve": "browser-sync start -s -f '**/*' --serveStatic 'dist'",
     "serve:lambda": "netlify-lambda serve src/lambda",
     "mustache": "mustache src/index.json src/index.mustache > dist/index.html",
-    "copy": "ncp src/admin/ dist/admin/ && ncp src/stuff/ dist/stuff/ && ncp assets/ dist/assets/ && ncp src/styles.css dist/styles.css",
+    "copy": "ncp src/admin/ dist/admin/ && ncp src/notes dist/notes/ && ncp src/stuff/ dist/stuff/ && ncp assets/ dist/assets/ && ncp src/styles.css dist/styles.css",
     "clean": "rimraf dist",
     "build": "npm run build:site && npm run build:lambda",
     "build:site": "npm run clean && mkdir dist && npm run mustache && npm run copy",
