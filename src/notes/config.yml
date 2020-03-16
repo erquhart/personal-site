@@ -7,8 +7,7 @@ collections:
   - name: notes
     label: Notes
     folder: notes
-    create: true
     fields:
-      - {label: Title, name: title, widget: title}
+      - {label: Title, name: title}
       - {label: Date, name: date, widget: datetime}
       - {label: Body, name: body, widget: markdown}
